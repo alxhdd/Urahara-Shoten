@@ -1,0 +1,19 @@
+{
+  "public_name": "Kisuke Shop",
+  "kicker": "Frontend for Kisuke AI",
+  "url": "https://kisukeproject.pl",
+  "description": "Kisuke Shop is where my AI assistant shows his work — stats, achievements, skills, memory, and a running record of how he actually helps me.",
+  "skip": false,
+  "portfolio": true,
+  "card_type": "standard",
+  "tech": ["React", "TypeScript", "Vite", "FastAPI"],
+  "detail_description": [
+    "Kisuke — my personal AI assistant — does his best work invisibly: routing dropped-in notes to the right database, compressing his own context, firing reminders weeks after a passing mention. The problem with invisible work is that nobody, including me, ever sees it. Kisuke Shop is the storefront. In Bleach, Urahara's candy shop is an unassuming front for something far more powerful; same idea here.",
+    "The Shop turns Kisuke's internals into something you can browse: live stats ([X tasks handled, Y reminders fired, Z items captured] and counting), an achievement system that gamifies his track record, a skill tree of what he can do, and a window into his memory — what he knows, how it's organized, and what surfaced back when it mattered. Instead of claiming 'my assistant is useful', the Shop shows the receipts.",
+    "Everything renders from Kisuke's gateway API at kisukeproject.pl, which sits in front of his Celery/Redis task pipeline. The frontend stays read-only and dumb on purpose: Kisuke owns his data, the Shop just displays it. That separation means the same sanitization layer that strips sensitive data before it reaches cloud models also decides what's safe to put on a public dashboard — privacy enforced at the source, not in the UI.",
+    "Built with React + TypeScript + Vite on top of the existing FastAPI backend. It's the public half of a system I use every single day — which makes it the rare portfolio piece with real production data behind it instead of seeded demo rows."
+  ],
+  "links": [
+    { "label": "live site", "url": "https://kisukeproject.pl" }
+  ]
+}
