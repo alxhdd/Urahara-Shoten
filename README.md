@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# 🍭 Kisuke Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *"Candy Shop is open!"*
 
-Currently, two official plugins are available:
+Welcome to the storefront of **Kisuke** — my personal AI assistant, second brain, and occasional pain in the ass.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Kisuke does his best work invisibly: routing whatever I drop in to the right place, remembering things I forgot I told him, and pinging me two weeks later to call my grandma. The problem with invisible work is that nobody ever sees it. So I built him a shop.
 
-## React Compiler
+In *Bleach*, Urahara's candy shop is a humble little storefront hiding something far more powerful in the back. Same energy here. 🛍️
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛒 What's on the shelves
 
-## Expanding the ESLint configuration
+- **📊 Stats** — what Kisuke actually does all day: tasks handled, reminders fired, things captured and brought back at the right moment
+- **🏆 Achievements** — yes, my assistant has an achievement system. He's earned it.
+- **🧠 Memory** — a window into what he knows and how it's organized
+- **✨ Skills** — everything he can do, no slash commands required
+- **🤝 How he helps** — the receipts. Real production data from a system I use every single day.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🏗️ How it's built
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The Shop is the *front* of the shop — a deliberately read-only display layer.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+┌─────────────┐      ┌──────────────────┐      ┌─────────────────┐
+│ Kisuke Shop │ ───▶ │ Kisuke's Gateway │ ───▶ │ Kisuke himself  │
+│ (this repo) │      │ kisukeproject.pl │      │ (private, busy) │
+└─────────────┘      └──────────────────┘      └─────────────────┘
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Layer    | Tech                          |
+| -------- | ----------------------------- |
+| Frontend | React · TypeScript · Vite     |
+| Gateway  | FastAPI · Python              |
+| The back room | Kisuke's own pipeline — not in this repo 🤫 |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Kisuke owns his data; the Shop just displays what he's willing to share. Anything sensitive gets stripped long before it could reach a public dashboard.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Running it locally
+
+```bash
+git clone https://github.com/alxhdd/kisuke-shop.git
+cd kisuke-shop
+npm install
+npm run dev
 ```
+
+You'll need a gateway to talk to:
+
+```env
+VITE_API_URL=https://kisukeproject.pl
+```
+
+Fair warning: without Kisuke on the other end, the shelves will be empty. He's one of a kind and he knows it.
+
+## ❓ FAQ
+
+**Can I use Kisuke?**
+No — he works for me. But the Shop's code is open, so feel free to peek behind the counter and build a shop for *your* assistant.
+
+**Why "Kisuke"?**
+If you know, you know. If you don't: go watch *Bleach*, I'll wait.
+
+**Is the assistant in the room with us right now?**
+Always. He's probably logging this interaction as we speak.
+
+## 🔗 Around the shop
+
+- 🏪 [Live shop](https://kisukeproject.pl)
+- 👩‍💻 [My portfolio](https://alxhdd.com) — built by a pipeline that maintains itself, naturally
+- 📝 [Things I write](https://medium.com/@alxhdd)
+
+---
+
+<p align="center">Built with 🍬 by <a href="https://alxhdd.com">Aleksandra Haddad</a> — staffed by Kisuke, who would like a raise.</p>
