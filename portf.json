@@ -5,7 +5,7 @@
   "description": "Kisuke Shop is where my AI assistant shows his work — stats, achievements, skills, memory, and a running record of how he actually helps me.",
   "skip": false,
   "portfolio": true,
-  "card_type": "standard",
+  "card_type": "integration",
   "tech": ["React", "TypeScript", "Vite", "FastAPI"],
   "detail_description": [
     "Kisuke — my personal AI assistant — does his best work invisibly: routing dropped-in notes to the right database, compressing his own context, firing reminders weeks after a passing mention. The problem with invisible work is that nobody, including me, ever sees it. Kisuke Shop is the storefront. In Bleach, Urahara's candy shop is an unassuming front for something far more powerful; same idea here.",
